@@ -15,7 +15,7 @@ class App extends React.Component{
       {action:"Collect Tickets",done:false},
       {action:"Call Joe",done:false}
     ],
-    showCompleted:false
+    showCompleted:true
     }
   }
   updateNewTextValue=(event)=>{
