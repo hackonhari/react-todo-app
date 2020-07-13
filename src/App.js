@@ -51,7 +51,6 @@ class App extends React.Component{
 
     }
   render(){
-      console.log(this.state)
     return(
     <div className="container">
       <TodoBanner name={this.state.userName} tasks={this.state.todoItems} />
