@@ -33,7 +33,6 @@ class App extends React.Component{
   toggleTodo=(todo)=>this.setState({todoItems:this.state.todoItems.map(item=>item.action===todo.action?{action:item.action,done:!item.done}:item)},()=>localStorage.setItem('todos',JSON.stringify(this.state)));
 
   todoTableRows=(doneValue)=>{
-    console.log(doneValue)
     return this.state.todoItems.filter(item=>item.done===doneValue).map(item=>
     <TodoRow key={item.action} item={item} callback={this.toggleTodo}/>)}
   
@@ -46,7 +45,7 @@ class App extends React.Component{
         {action:"Collect Tickets",done:false},
         {action:"Call Joe",done:false}
       ],
-      showCompleted:false
+      showCompleted:true
       })
 
     }
